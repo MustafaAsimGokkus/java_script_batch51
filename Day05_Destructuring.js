@@ -1,59 +1,44 @@
- //We will learn destructuring in JS
- console.clear();
- //Arraow Functions
-  function sum (num){
-    
-    return num + 100;
-    
-    
+console.clear()
+// we will learn de-structuring
+
+  var user = {
+    firstName:'Sam',
+    lastName : 'Collin',
+    isEmployed : true,
+     theLocation: 'New Jersey'
+
   }
-  console.log(sum(4));
-  //ARROW FUNCTION => case 1: one argument
-  //remove function keyword(function) with name (sum)
-  //1 way Then put an arrow in between params and body
-   var arrow = (num) =>{
-    
-    return num + 100;
-  }
-  
-  console.log(arrow(11));//111
-  //2. way
-  //Delete function and name, also delete the {} and delete also return keyword
-  var arrow2 =  (num) => num + 100;
-    
-    console.log(arrow2(12));
-  
-  //3. way
-  //Delete function and name, also delete the {} and delete also return keyword also you can remove params ()
-    var arrow3 = num => num + 100;
+//regular way of getting elements
+//   console.log(user.firstName)
+// console.log(user.lastName)
+// console.log(user.isEmployed)
+// console.log(user.lastName)
 
-    console.log(arrow3(6));
-   //ARROW FUNCTION => case 1: with more than one argument
-   function sum2 (n1 , n2){
-     
-     return n1 + n2 + 100;
-     
+ var {firstName,lastName,isEmployed,theLocation} = user
+ 
+  console.log(firstName)
+  console.log(lastName)
+  console.log(isEmployed)
+  console.log(theLocation)
+
+ function getUser (){
+   return{
+     name2:    'Sam',
+     location2:'NYC',
+     email:    'sam@gmail.com'
    }
-  
-    console.log(sum2(2,3));
-    //remove function keyword(function) with name (sum)
-  //1 way Then put an arrow in between params and body
-  
-   var arrow4 =  (n1 , n2) => {
-     
-     return n1 + n2 + 100;
-     
-   }
-   
-   console.log(arrow4(2,6));
-   //2. way
-  //Delete function and name, also delete the {} and delete also return keyword
-   var arrow5 = (n1 , n2) =>  n1 + n2 + 100;
-     
-  console.log(arrow5(3, 9));
-     
-   
-  
+ }
 
+var {name2,location2,email} = getUser()
+console.log(name2)
+console.log(location2)
+console.log(email)
 
-
+var user2 = ['Tim','LA','tim@gmail.com']
+console.log(user2[0])
+console.log(user2[1])
+console.log(user2[2])
+var[userName1,userLocation1,userEmail1] = user2
+console.log(userName1)
+console.log(userLocation1)
+console.log(userEmail1)
